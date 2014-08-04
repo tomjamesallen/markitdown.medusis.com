@@ -205,7 +205,7 @@ like this: <i>toto<br/>titi</i> => <i>toto</i><br/><i>titi</i>
 		<xsl:when test="not(ancestor::a or ancestor::li)">
 			<xsl:variable name="level" select="xs:integer(substring(local-name(), 2,1))"/>
 			<xsl:variable name="prefix">
-				<xsl:for-each select="0 to $level">#</xsl:for-each>
+				<xsl:for-each select="1 to $level">#</xsl:for-each>
 				<xsl:text> </xsl:text>
 				</xsl:variable>
 			<xsl:value-of select="$prefix"/>
